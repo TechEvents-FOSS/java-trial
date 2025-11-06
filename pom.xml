@@ -85,9 +85,33 @@
           <version>3.6.1</version>
         </plugin>
         <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.23.0</version>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-pmd-plugin</artifactId>
+          <version>3.23.0</version>
+          <configuration>
+        <!-- Optional: fail build on violations -->
+        <failOnViolation>false</failOnViolation>
+
+        <!-- Optional: where to put reports -->
+        <targetJdk>17</targetJdk>
+        <outputDirectory>${project.build.directory}/pmd-reports</outputDirectory>
+
+        <!-- Optional: specify your ruleset -->
+        <rulesets>
+          <ruleset>category/java/bestpractices.xml</ruleset>
+          <ruleset>category/java/codestyle.xml</ruleset>
+          <ruleset>category/java/errorprone.xml</ruleset>
+          <ruleset>category/java/performance.xml</ruleset>
+        </rulesets>
+        </configuration>
+        <executions>
+        <execution>
+          <phase>verify</phase>
+          <goals>
+            <goal>check</goal>
+          </goals>
+        </execution>
+      </executions>
         </plugin>
       </plugins>
     </pluginManagement>
