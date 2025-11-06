@@ -16,7 +16,7 @@ public class LeapTest
    @Test
    public void normalNonLeapYears() {
         assertFalse(CalendarUtils.isLeapYear(1995));
-        assertTrue(CalendarUtils.isLeapYear(2011));
+        assertFalse(CalendarUtils.isLeapYear(2011));
    }
    @Test
    public void centuryLeapYears() {
