@@ -1,4 +1,4 @@
-package org.osidays.demo;
+package org.osidays.cidemo;
 
 public class CalendarUtils
 {
