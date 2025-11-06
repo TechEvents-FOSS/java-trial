@@ -1,6 +1,6 @@
-package org.osidays.demo;
+package org.osidays.cidemo;
 
-import static org.osidays.demo.CalendarUtils.isLeapYear;
+import static org.osidays.cidemo.CalendarUtils.isLeapYear;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
