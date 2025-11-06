@@ -27,7 +27,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Compile Code with Apache Maven
-      run: mvn -B compile pmd:pmd --file pom.xml         
+    - name: Check Code with PMD
+      run: mvn -B pmd:check --file pom.xml         
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     
